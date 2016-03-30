@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Python列表解析式 | 郭澍存</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="列表解析式是将一个列表（实际上适用于任何可迭代对象（iterable））转换成另一个列表的工具。在转换时，每个元素都可以按照某个条件被包含在新的列表中，并根据需要做出一些变换。如果熟悉函数式编程，可以把列表推导想成是一个filter后面跟了一个map的语法糖，也可以用for循环来解释：123&amp;gt;&amp;gt;&amp;gt; doubled_odds = map(lambda n: n * 2, filte">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python列表解析式">
+<meta property="og:url" content="http://yoursite.com/2016/01/14/Python列表解析式/index.html">
+<meta property="og:site_name" content="郭澍存">
+<meta property="og:description" content="列表解析式是将一个列表（实际上适用于任何可迭代对象（iterable））转换成另一个列表的工具。在转换时，每个元素都可以按照某个条件被包含在新的列表中，并根据需要做出一些变换。如果熟悉函数式编程，可以把列表推导想成是一个filter后面跟了一个map的语法糖，也可以用for循环来解释：123&amp;gt;&amp;gt;&amp;gt; doubled_odds = map(lambda n: n * 2, filte">
+<meta property="og:updated_time" content="2016-01-20T00:49:25.086Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python列表解析式">
+<meta name="twitter:description" content="列表解析式是将一个列表（实际上适用于任何可迭代对象（iterable））转换成另一个列表的工具。在转换时，每个元素都可以按照某个条件被包含在新的列表中，并根据需要做出一些变换。如果熟悉函数式编程，可以把列表推导想成是一个filter后面跟了一个map的语法糖，也可以用for循环来解释：123&amp;gt;&amp;gt;&amp;gt; doubled_odds = map(lambda n: n * 2, filte">
+  
+    <link rel="alternative" href="/atom.xml" title="郭澍存" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/images/wm.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">郭澍存</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">我们都有一个梦想，努力地呵护她。</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友链</li>
+						
+						
+						<li>博主</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/categories/成长会">成长会</a></li>
+				        
+							<li><a href="/categories/coder">CODER</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/fountainhead-gq" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/2515455867/" title="weibo">weibo</a>
+					        
+								<a class="douban" target="_blank" href="http://www.douban.com/people/60641724/" title="douban">douban</a>
+					        
+								<a class="mail" target="_blank" href="mailto:fountainhead_gq@163.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Atom/" style="font-size: 17.5px;">Atom</a> <a href="/tags/AutoHotKey/" style="font-size: 12.5px;">AutoHotKey</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 10px;">Matplotlib</a> <a href="/tags/Pyhton/" style="font-size: 10px;">Pyhton</a> <a href="/tags/python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 12.5px;">Ubuntu</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/datetime/" style="font-size: 10px;">datetime</a> <a href="/tags/flask/" style="font-size: 15px;">flask</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/pylab/" style="font-size: 10px;">pylab</a> <a href="/tags/regex/" style="font-size: 10px;">regex</a> <a href="/tags/str/" style="font-size: 10px;">str</a> <a href="/tags/人生感悟/" style="font-size: 10px;">人生感悟</a> <a href="/tags/成长会/" style="font-size: 10px;">成长会</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.calios.gq/">Calios&#39;s Eden</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">没有什么可说的</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">郭澍存</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/images/wm.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">郭澍存</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">我们都有一个梦想，努力地呵护她。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/成长会">成长会</a></li>
+		        
+					<li><a href="/categories/coder">CODER</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/fountainhead-gq" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/2515455867/" title="weibo">weibo</a>
+			        
+						<a class="douban" target="_blank" href="http://www.douban.com/people/60641724/" title="douban">douban</a>
+			        
+						<a class="mail" target="_blank" href="mailto:fountainhead_gq@163.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Python列表解析式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/14/Python列表解析式/" class="article-date">
+  	<time datetime="2016-01-14T08:30:00.000Z" itemprop="datePublished">01/14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python列表解析式
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/">flask</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/coder/">coder</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>列表解析式是将一个列表（实际上适用于任何可迭代对象（iterable））转换成另一个列表的工具。在转换时，每个元素都可以按照某个条件被包含在新的列表中，并根据需要做出一些变换。<br>如果熟悉函数式编程，可以把列表推导想成是一个filter后面跟了一个map的语法糖，也可以用for循环来解释：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span>doubled_odds = map(<span class="keyword">lambda</span> n: n * <span class="number">2</span>, filter(<span class="keyword">lambda</span> n: n % <span class="number">2</span> == <span class="number">1</span>, numbers))</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>doubled_odds = [n * <span class="number">2</span> <span class="keyword">for</span> n <span class="keyword">in</span> numbers <span class="keyword">if</span> n % <span class="number">2</span> == <span class="number">1</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="从循环到解析式">从循环到解析式</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new_things = []</span><br><span class="line"><span class="keyword">for</span> ITEM <span class="keyword">in</span> old_things:</span><br><span class="line">    <span class="keyword">if</span> condition_based_on(ITEM):</span><br><span class="line">        new_things.append(<span class="string">"something"</span> + ITEM)</span><br></pre></td></tr></table></figure>
+<p>将上面的for循环改写成这样的列表解析式：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new_things = [<span class="string">"something"</span> + ITEM <span class="keyword">for</span> ITEM <span class="keyword">in</span> old_things <span class="keyword">if</span> condition_based_on(ITEM)]</span><br></pre></td></tr></table></figure></p>
+<h2 id="列表解析式：可视化解读">列表解析式：可视化解读</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">doubled_odds = []</span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> numbers:</span><br><span class="line">    <span class="keyword">if</span> n % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">        doubled_odds.append(n * <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>转换成：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">doubled_odds = [n * <span class="number">2</span> <span class="keyword">for</span> n <span class="keyword">in</span> numbers <span class="keyword">if</span> n % <span class="number">2</span> == <span class="number">1</span>]</span><br></pre></td></tr></table></figure></p>
+<p>没有if语句的for循环：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">doubled_numbers = []</span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> numbers:</span><br><span class="line">    doubled_numbers.append(n * <span class="number">2</span>)</span><br></pre></td></tr></table></figure></p>
+<p>改成列表解析式：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">doubled_numbers = [n * <span class="number">2</span> <span class="keyword">for</span> n <span class="keyword">in</span> numbers]</span><br></pre></td></tr></table></figure></p>
+<h2 id="嵌套循环">嵌套循环</h2><p>一个拉平（flatten）矩阵（以列表为元素的列表）的for循环：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flattened = []</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> matrix:</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> row:</span><br><span class="line">        flattened.append(n)</span><br></pre></td></tr></table></figure></p>
+<p>改写为：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flattened = [n <span class="keyword">for</span> row <span class="keyword">in</span> matrix <span class="keyword">for</span> n <span class="keyword">in</span> row]</span><br></pre></td></tr></table></figure></p>
+<p>如果要在列表解析式中处理嵌套循环，请记住for循环子句的顺序与我们原来for循环的顺序是一致的。</p>
+<h2 id="其他解析式">其他解析式</h2><p>提取单词序列中每个单词的首字母，创建了一个集合（set）：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">irst_letters = set()</span><br><span class="line"><span class="keyword">for</span> w <span class="keyword">in</span> words:</span><br><span class="line">    first_letters.add(w[<span class="number">0</span>])</span><br></pre></td></tr></table></figure></p>
+<p>改写成：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">irst_letters = &#123;w[<span class="number">0</span>] <span class="keyword">for</span> w <span class="keyword">in</span> words&#125;</span><br></pre></td></tr></table></figure></p>
+<p>将原有字典的键和值互换，从而创建了一个新的字典：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">flipped = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> original.items():</span><br><span class="line">    flipped[value] = key</span><br></pre></td></tr></table></figure></p>
+<p>可以改写为字典解析式：</p>
+<pre><code class="Python">flipped = {value: key <span class="keyword">for</span> key, value <span class="keyword">in</span> original.items()}
+</code></pre>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/20/常用的CSS实现效果汇总/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          常用的CSS实现效果汇总
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/11/flask安装/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">flask安装</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+<div class="share-text">最近访客 ↓</div>
+<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="40" id="ds-recent-visitors"></div>
+</div>
+</br>
+
+
+
+
+<div class="duoshuo">
+
+	<!-- 多说分享功能 start -->
+	<div class="ds-share flat" data-thread-key="Python列表解析式" data-title="Python列表解析式"  data-url="http://yoursite.com/2016/01/14/Python列表解析式/" id="ds-share">
+    <div class="ds-share-inline" id="ds-reset">
+    <ul class="ds-share-icons-16">
+      <li data-toggle="ds-share-icons-more"><a class="ds-more flat" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone flat" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt flat" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+    </ul>
+    <div class="ds-share-icons-more" style="display: none;"><div class="ds-share-icons"> <div class="ds-share-icons-inner"> <ul class="ds-share-icons-16">  <li> <a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">新浪微博</a> </li>  <li> <a class="ds-qzone flat" href="javascript:void(0);" data-service="qzone">QQ空间</a> </li>  <li> <a class="ds-sohu flat" href="javascript:void(0);" data-service="sohu">搜狐微博</a> </li>  <li> <a class="ds-renren flat" href="javascript:void(0);" data-service="renren">人人网</a> </li>  <li> <a class="ds-netease flat" href="javascript:void(0);" data-service="netease">网易微博</a> </li>  <li> <a class="ds-qqt flat" href="javascript:void(0);" data-service="qqt">腾讯微博</a> </li>  <li> <a class="ds-kaixin flat" href="javascript:void(0);" data-service="kaixin">开心网</a> </li>  <li> <a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣网</a> </li>  <li> <a class="ds-qq flat" href="javascript:void(0);" data-service="qq">QQ</a> </li>  <li> <a class="ds-meilishuo flat" href="javascript:void(0);" data-service="meilishuo">美丽说</a> </li>  <li> <a class="ds-mogujie flat" href="javascript:void(0);" data-service="mogujie">蘑菇街</a> </li>  <li> <a class="ds-baidu flat" href="javascript:void(0);" data-service="baidu">百度</a> </li>  <li> <a class="ds-taobao flat" href="javascript:void(0);" data-service="taobao">淘宝</a> </li>  <li> <a class="ds-google flat" href="javascript:void(0);" data-service="google">谷歌</a> </li>  <li> <a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a> </li>  <li> <a class="ds-diandian flat" href="javascript:void(0);" data-service="diandian">点点网</a> </li>  <li> <a class="ds-huaban flat" href="javascript:void(0);" data-service="huaban">花瓣网</a> </li>  <li> <a class="ds-duitang flat" href="javascript:void(0);" data-service="duitang">堆糖</a> </li>  <li> <a class="ds-youdao flat" href="javascript:void(0);" data-service="youdao">有道云笔记</a> </li>  <li> <a class="ds-pengyou flat" href="javascript:void(0);" data-service="pengyou">朋友网</a> </li>  <li> <a class="ds-facebook flat" href="javascript:void(0);" data-service="facebook">Facebook</a> </li>  <li> <a class="ds-twitter flat" href="javascript:void(0);" data-service="twitter">Twitter</a> </li>  <li> <a class="ds-linkedin flat" href="javascript:void(0);" data-service="linkedin">Linkedin</a> </li>  <li> <a class="ds-msn flat" href="javascript:void(0);" data-service="msn">MSN</a> </li>  </ul> </div> <div class="ds-share-icons-footer">多说分享插件</div></div></div>
+    </div>
+    </div>
+    <!-- 多说分享功能 end -->
+	</br>
+
+ 
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Python列表解析式" data-title="Python列表解析式" data-url="http://yoursite.com/2016/01/14/Python列表解析式/"></div>
+	<!-- 多说评论框 end -->
+	
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"guoshucun"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+ </div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016   郭澍存
+    	</div>
+      	<div class="footer-right">
+      		
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:3px;right:1px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>
