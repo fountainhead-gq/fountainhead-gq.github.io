@@ -119,7 +119,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Atom/" style="font-size: 17.5px;">Atom</a> <a href="/tags/AutoHotKey/" style="font-size: 12.5px;">AutoHotKey</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 10px;">Matplotlib</a> <a href="/tags/Pyhton/" style="font-size: 10px;">Pyhton</a> <a href="/tags/python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 12.5px;">Ubuntu</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/datetime/" style="font-size: 10px;">datetime</a> <a href="/tags/flask/" style="font-size: 15px;">flask</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/pylab/" style="font-size: 10px;">pylab</a> <a href="/tags/regex/" style="font-size: 10px;">regex</a> <a href="/tags/str/" style="font-size: 10px;">str</a> <a href="/tags/人生感悟/" style="font-size: 10px;">人生感悟</a> <a href="/tags/成长会/" style="font-size: 10px;">成长会</a>
+						<a href="/tags/Atom/" style="font-size: 17.5px;">Atom</a> <a href="/tags/AutoHotKey/" style="font-size: 12.5px;">AutoHotKey</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 10px;">Matplotlib</a> <a href="/tags/Pyhton/" style="font-size: 12.5px;">Pyhton</a> <a href="/tags/python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 12.5px;">Ubuntu</a> <a href="/tags/Virtualenv/" style="font-size: 10px;">Virtualenv</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/datetime/" style="font-size: 10px;">datetime</a> <a href="/tags/flask/" style="font-size: 15px;">flask</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/pylab/" style="font-size: 10px;">pylab</a> <a href="/tags/regex/" style="font-size: 10px;">regex</a> <a href="/tags/str/" style="font-size: 10px;">str</a> <a href="/tags/人生感悟/" style="font-size: 10px;">人生感悟</a> <a href="/tags/成长会/" style="font-size: 10px;">成长会</a>
 					</div>
 				</section>
 				
@@ -195,6 +195,79 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-搭建Virtualenv环境教程" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/01/搭建Virtualenv环境教程/" class="article-date">
+  	<time datetime="2016-04-01T06:00:25.086Z" itemprop="datePublished">04/01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/01/搭建Virtualenv环境教程/">搭建Virtualenv环境教程</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Virtualenv是一个用来创建独立的Python环境的包,能够处理的基本问题是包的依赖、版本和间接权限问题。可以为每个项目建立不同的/独立的Python环境，并将为每个项目安装所有需要的软件包到它们各自独立的环境中。</p>
+<h2 id="安装Virtualenv">安装Virtualenv</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pip <span class="keyword">install</span> virtualenv</span><br></pre></td></tr></table></figure>
+<h2 id="virtualenv基本使用">virtualenv基本使用</h2><p>使用virtualenv命令创建管理python环境：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#创建一个名为envname的目录, 并且安装了envname/bin/python, 创建了lib,<span class="keyword">include</span>,bin目录,安装了pip</span></span><br><span class="line"></span><br><span class="line">shucun@shucun-ubuntu:~$ virtualenv envname</span><br><span class="line">Running virtualenv with interpreter /usr/bin/python2</span><br><span class="line">New python executable in envname/bin/python2</span><br><span class="line">Also creating executable in envname/bin/python</span><br><span class="line">Installing setuptools, pip...done.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">shucun@shucun-ubuntu:~$ cd envname/</span><br><span class="line">shucun@shucun-ubuntu:~/envname$ ls</span><br><span class="line">bin  include  lib  local</span><br><span class="line"></span><br><span class="line">shucun@shucun-ubuntu:~/envname$ ll</span><br><span class="line">drwxrwxr-x  <span class="number">6</span> shucun shucun  <span class="number">4096</span>  <span class="number">3</span>月 <span class="number">31</span> <span class="number">17</span>:<span class="number">37</span> ./</span><br><span class="line">drwx------ <span class="number">52</span> shucun shucun <span class="number">16384</span>  <span class="number">3</span>月 <span class="number">31</span> <span class="number">17</span>:<span class="number">48</span> ../</span><br><span class="line">drwxrwxr-x  <span class="number">2</span> shucun shucun  <span class="number">4096</span>  <span class="number">3</span>月 <span class="number">31</span> <span class="number">17</span>:<span class="number">37</span> bin/</span><br><span class="line">drwxrwxr-x  <span class="number">2</span> shucun shucun  <span class="number">4096</span>  <span class="number">3</span>月 <span class="number">31</span> <span class="number">17</span>:<span class="number">37</span> include/</span><br><span class="line">drwxrwxr-x  <span class="number">4</span> shucun shucun  <span class="number">4096</span>  <span class="number">3</span>月 <span class="number">31</span> <span class="number">17</span>:<span class="number">37</span> lib/</span><br><span class="line">drwxrwxr-x  <span class="number">2</span> shucun shucun  <span class="number">4096</span>  <span class="number">3</span>月 <span class="number">31</span> <span class="number">17</span>:<span class="number">37</span> local/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>lib,所有安装的python库都会放在这个目录中的lib/pythonx/site-packages/下</li>
+<li>bin,bin/python是在当前环境是使用的python解释器</li>
+</ul>
+<h2 id="激活Virtualenv">激活Virtualenv</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">shucun@shucun-ubuntu:~/envname$ source ./bin/activate  <span class="preprocessor">#激活当前virtualenv</span></span><br><span class="line">(envname)shucun@shucun-ubuntu:~/envname$  <span class="preprocessor">#终端发生了变化</span></span><br><span class="line"></span><br><span class="line">(envname)shucun@shucun-ubuntu:~/envname$ pip <span class="built_in">list</span>   <span class="preprocessor">#使用pip查看当前库</span></span><br><span class="line">argparse (<span class="number">1.2</span><span class="number">.1</span>)</span><br><span class="line">pip (<span class="number">1.5</span><span class="number">.6</span>)</span><br><span class="line">setuptools (<span class="number">12.2</span>)</span><br><span class="line">wsgiref (<span class="number">0.1</span><span class="number">.2</span>)</span><br><span class="line"></span><br><span class="line">(envname)shucun@shucun-ubuntu:~/envname$ pip freeze  <span class="preprocessor">#显示所有依赖</span></span><br><span class="line">argparse==<span class="number">1.2</span><span class="number">.1</span></span><br><span class="line">wsgiref==<span class="number">0.1</span><span class="number">.2</span></span><br><span class="line">(envname)shucun@shucun-ubuntu:~/envname$ pip freeze &gt; requirement.txt  <span class="preprocessor">#生成requirement.txt文件</span></span><br><span class="line">(envname)shucun@shucun-ubuntu:~/envname$ pip install -r requirement.txt  <span class="preprocessor">#根据requirement.txt内容生成相同的环境</span></span><br></pre></td></tr></table></figure>
+<h2 id="关闭Virtualenv">关闭Virtualenv</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(envname)shucun<span class="annotation">@shucun</span>-<span class="string">ubuntu:</span>~/envname$ deactivate</span><br></pre></td></tr></table></figure>
+<h2 id="创建指定Python版本的Virtualenv">创建指定Python版本的Virtualenv</h2><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#创建python3<span class="number">.4</span>虚拟环境</span><br><span class="line">shucun<span class="variable">@shucun</span>-ubuntu:~$ virtualenv -p /usr/bin/python3 ENV3<span class="number">.4</span>  </span><br><span class="line">Already using interpreter /usr/bin/python3</span><br><span class="line">Using base prefix <span class="string">'/usr'</span></span><br><span class="line">New <span class="keyword">python</span> executable <span class="keyword">in</span> ENV3<span class="number">.4</span>/bin/python3</span><br><span class="line">Also creating executable <span class="keyword">in</span> ENV3<span class="number">.4</span>/bin/<span class="keyword">python</span></span><br><span class="line">Installing setuptools, pip...done.</span><br><span class="line"></span><br><span class="line">shucun<span class="variable">@shucun</span>-ubuntu:~/ENV3<span class="number">.4</span>$ <span class="keyword">source</span> ./bin/activate</span><br><span class="line">(ENV3<span class="number">.4</span>)shucun<span class="variable">@shucun</span>-ubuntu:~/ENV3<span class="number">.4</span>$ <span class="keyword">python</span></span><br></pre></td></tr></table></figure>
+<p>不同的Virtualenv可以解决python版本冲突问题和python库不同版本的问题.</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pyhton/">Pyhton</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Virtualenv/">Virtualenv</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/coder/">coder</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/01/搭建Virtualenv环境教程/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-Django多语言国际化设置" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -221,18 +294,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Django多语言国际化设置">Django多语言国际化设置</h2><ul>
+        <ul>
 <li>settings.py文件中设置：</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">MIDDLEWARE_CLASSES = (</span><br><span class="line">    <span class="string">'django.middleware.locale.LocaleMiddleware'</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">LANGUAGE_CODE = <span class="string">'zh_CN'</span></span><br><span class="line">TIME_ZONE = <span class="string">'Asia/Shanghai'</span></span><br><span class="line">USE_I18N = <span class="keyword">True</span></span><br><span class="line">USE_L10N = <span class="keyword">True</span></span><br><span class="line">USE_TZ = <span class="keyword">True</span></span><br><span class="line"></span><br><span class="line">LANGUAGES = (</span><br><span class="line">    (<span class="string">'en'</span>, (<span class="string">'English'</span>)),</span><br><span class="line">    (<span class="string">'zh-cn'</span>, (<span class="string">'中文简体'</span>)),</span><br><span class="line">    (<span class="string">'zh-tw'</span>, (<span class="string">'中文繁體'</span>)),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">#翻译文件所在目录，需要手工创建</span></span><br><span class="line">LOCALE_PATHS = (</span><br><span class="line">    os.path.join(BASE_DIR, <span class="string">'locale'</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">TEMPLATE_CONTEXT_PROCESSORS = (</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">"django.core.context_processors.i18n"</span>,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>标记要翻译的文字，如下model的定义：</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.utils.translation <span class="keyword">import</span> ugettext_lazy <span class="keyword">as</span> _</span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DemoModel</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">  demofield = models.CharField(_(<span class="string">u'demo field'</span>), help_text = _(<span class="string">u'Help text'</span>), max_length = <span class="number">10</span>)</span><br><span class="line">```  </span><br><span class="line">或view的定义：</span><br><span class="line">```Python</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> HttpResponse(_(<span class="string">u'Welcome to my site.'</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.utils.translation <span class="keyword">import</span> ugettext_lazy <span class="keyword">as</span> _</span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DemoModel</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">  demofield = models.CharField(_(<span class="string">u'demo field'</span>), help_text = _(<span class="string">u'Help text'</span>), max_length = <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<p>或者，view的定义：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> HttpResponse(_(<span class="string">u'Welcome to my site.'</span>))</span><br></pre></td></tr></table></figure>
 <ul>
 <li>定义django的模板，在模板中添加<code>load i18n</code>,然后使用trans标记。</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% load i18n %&#125;</span><br><span class="line"></span><br><span class="line">&lt;li&gt;&lt;a href="&#123;% url 'search' %&#125;"&gt;&#123;% trans 'Search' %&#125;&lt;/a&gt;&lt;/li&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% load i18n %&#125; #加载在html头部</span><br><span class="line"></span><br><span class="line">&lt;li&gt;&lt;a href="&#123;% url 'search' %&#125;"&gt;&#123;% trans 'Search' %&#125;&lt;/a&gt;&lt;/li&gt;</span><br></pre></td></tr></table></figure>
 <p>如果有变量和字符串都需要翻译，需要使用<br><code>blocktrans</code>标记。使用方法如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blocktrans %&#125;This <span class="keyword">is</span> my site &#123;&#123; site_name &#125;&#125;&#123;% endblocktrans %&#125;</span><br></pre></td></tr></table></figure>
 <ul>
@@ -247,9 +322,7 @@
 <li>编译.po文件，在app的根目录或整个工程的根目录输入命令：</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin.py  compilemessages</span><br></pre></td></tr></table></figure>
-<p>生成了编译好的django.mo,是个二进制文件,然后就OK了.</p>
-<p>如果在代码或模板中增加或删除了相关的国际化代码,需要再次运行<code>makemessages</code> 和<code>compilemessages</code><br>如果只是改了django.po中的内容,只需<code>compile</code>就行了.</p>
-
+<p>生成编译好的django.mo,是个二进制文件,然后就OK了.<br>
       
     </div>
     
@@ -266,6 +339,10 @@
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/30/Django多语言国际化设置/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -318,16 +395,14 @@
 <li><p>以管理员的身份启动ahk文件</p>
 </li>
 <li>最后测试能否实现功能。</li>
-<li>更多内容详见: <a href="https://github.com/fountainhead-gq/ImgUploadAHK" target="_blank" rel="external">github</a></li>
+<li>更多内容详见: <a href="https://github.com/fountainhead-gq/ImgUploadAHK">github</a></li>
 </ul>
 <h2 id="快捷操作">快捷操作</h2><ul>
 <li>选中并复制想要上传的图片，<code>ctrl + c</code>或右键复制</li>
 <li>按下快捷键<code>ctrl + alt + c</code>,此操作实现图片上传至图库，并生成图片链接到剪切板。</li>
-<li>按下<code>ctrl + v</code>，把剪切板的链接（格式: <img src="url" alt="名称">）复制到markdown文件，最终实现简化。</li>
+<li>按下<code>ctrl + v</code>，把剪切板的链接（格式: <code>![name](url)</code>）复制到markdown文件，最终实现简化。</li>
 </ul>
-<h2 id="功能预览">功能预览</h2><p>在按下快捷键<code>ctrl + alt + c</code>调用程序会短暂的出现CMD窗口，当CMD窗口自动消失后按<code>ctrl + v</code>贴入图片。</p>
-<p><img src="http://7xrcg9.com1.z0.glb.clouddn.com/markdown/ImgtoGif.gif" alt="ImgtoGif"></p>
-
+<h2 id="功能预览">功能预览</h2><p>在按下快捷键<code>ctrl + alt + c</code>调用程序会短暂的出现CMD窗口，当CMD窗口自动消失后按<code>ctrl + v</code>贴入图片。<br>
       
     </div>
     
@@ -344,6 +419,10 @@
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/03/Markdown中添加图片的快捷操作流程/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -810,78 +889,6 @@
         <p class="article-more-link">
           <a  href="/2016/01/22/科学绘图Matplotlib的简易教程/#more">阅读全文 >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Atom Editor 之插件指南(6)" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/21/Atom Editor 之插件指南(6)/" class="article-date">
-  	<time datetime="2016-01-21T07:40:00.000Z" itemprop="datePublished">01/21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/21/Atom Editor 之插件指南(6)/">Atom Editor 之插件和指南(6)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="去掉默认界面中间白线的方法">去掉默认界面中间白线的方法</h3><p>edit -&gt; open your stylesheet ,添加代码：　<br>　<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">atom-text-editor</span><span class="pseudo">::shadow</span> <span class="class">.wrap-guide</span> &#123;</span><br><span class="line">  <span class="comment">//隐藏右边的白线</span></span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="相关的插件">相关的插件</h3><ul>
-<li><strong>markdown-scroll-sync</strong>：将 markdown-preview 的编辑区和预览区同步滚动。参见链接 <a href="https://atom.io/packages/markdown-scroll-sync" target="_blank" rel="external">markdown-scroll-sync</a></li>
-<li><strong>markdown-writer</strong>: markdown语法的快捷编辑工具。参见链接 <a href="https://atom.io/packages/markdown-writer" target="_blank" rel="external">markdown-writer</a></li>
-<li><strong>autoprefixer</strong>: 给 CSS 添加适当的前缀。链接： <a href="https://atom.io/packages/autoprefixer" target="_blank" rel="external">autoprefixer</a></li>
-<li><strong>color-picker</strong>: 快速选颜色工具。链接:<a href="https://atom.io/packages/color-picker" target="_blank" rel="external">color-picker</a></li>
-<li><strong>emmet</strong>: 写 HTML 的神器。链接: <a href="https://atom.io/packages/emmet" target="_blank" rel="external">emmet</a></li>
-<li><strong>autocomplete-plus</strong>：更好的自动完成代码. 链接： <a href="https://atom.io/packages/autocomplete-plus" target="_blank" rel="external">autocomplete-plus</a></li>
-<li><strong>seti-ui</strong>：支持很多文件扩展名图标的主题。链接： <a href="https://atom.io/themes/seti-ui" target="_blank" rel="external">seti-ui</a></li>
-<li><strong>atom-beautify</strong>：美化代码。链接： <a href="https://atom.io/packages/atom-beautify" target="_blank" rel="external">atom-beautify</a></li>
-<li><strong>minimap</strong>：侧边预览代码。链接： <a href="https://atom.io/packages/minimap" target="_blank" rel="external">minimap</a></li>
-<li><strong>file-icons</strong>: 显示文件图标。 链接： <a href="https://atom.io/packages/file-icons" target="_blank" rel="external">file-icons</a></li>
-<li><strong>atom-beautify</strong>: 整理各种代码。 链接： <a href="https://atom.io/packages/atom-beautify" target="_blank" rel="external">atom-beautify</a></li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Atom/">Atom</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/coder/">coder</a>
-	</div>
-
-
       
       <div class="clearfix"></div>
     </div>

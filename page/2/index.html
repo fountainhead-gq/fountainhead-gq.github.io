@@ -119,7 +119,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Atom/" style="font-size: 17.5px;">Atom</a> <a href="/tags/AutoHotKey/" style="font-size: 12.5px;">AutoHotKey</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 10px;">Matplotlib</a> <a href="/tags/Pyhton/" style="font-size: 10px;">Pyhton</a> <a href="/tags/python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 12.5px;">Ubuntu</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/datetime/" style="font-size: 10px;">datetime</a> <a href="/tags/flask/" style="font-size: 15px;">flask</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/pylab/" style="font-size: 10px;">pylab</a> <a href="/tags/regex/" style="font-size: 10px;">regex</a> <a href="/tags/str/" style="font-size: 10px;">str</a> <a href="/tags/人生感悟/" style="font-size: 10px;">人生感悟</a> <a href="/tags/成长会/" style="font-size: 10px;">成长会</a>
+						<a href="/tags/Atom/" style="font-size: 17.5px;">Atom</a> <a href="/tags/AutoHotKey/" style="font-size: 12.5px;">AutoHotKey</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 10px;">Matplotlib</a> <a href="/tags/Pyhton/" style="font-size: 12.5px;">Pyhton</a> <a href="/tags/python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 12.5px;">Ubuntu</a> <a href="/tags/Virtualenv/" style="font-size: 10px;">Virtualenv</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/datetime/" style="font-size: 10px;">datetime</a> <a href="/tags/flask/" style="font-size: 15px;">flask</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/pylab/" style="font-size: 10px;">pylab</a> <a href="/tags/regex/" style="font-size: 10px;">regex</a> <a href="/tags/str/" style="font-size: 10px;">str</a> <a href="/tags/人生感悟/" style="font-size: 10px;">人生感悟</a> <a href="/tags/成长会/" style="font-size: 10px;">成长会</a>
 					</div>
 				</section>
 				
@@ -194,6 +194,78 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Atom Editor 之插件指南(6)" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/21/Atom Editor 之插件指南(6)/" class="article-date">
+  	<time datetime="2016-01-21T07:40:00.000Z" itemprop="datePublished">01/21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/21/Atom Editor 之插件指南(6)/">Atom Editor 之插件和指南(6)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="去掉默认界面中间白线的方法">去掉默认界面中间白线的方法</h3><p>edit -&gt; open your stylesheet ,添加代码：　<br>　<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">atom-text-editor</span><span class="pseudo">::shadow</span> <span class="class">.wrap-guide</span> &#123;</span><br><span class="line">  <span class="comment">//隐藏右边的白线</span></span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="相关的插件">相关的插件</h3><ul>
+<li><strong>markdown-scroll-sync</strong>：将 markdown-preview 的编辑区和预览区同步滚动。参见链接 <a href="https://atom.io/packages/markdown-scroll-sync" target="_blank" rel="external">markdown-scroll-sync</a></li>
+<li><strong>markdown-writer</strong>: markdown语法的快捷编辑工具。参见链接 <a href="https://atom.io/packages/markdown-writer" target="_blank" rel="external">markdown-writer</a></li>
+<li><strong>autoprefixer</strong>: 给 CSS 添加适当的前缀。链接： <a href="https://atom.io/packages/autoprefixer" target="_blank" rel="external">autoprefixer</a></li>
+<li><strong>color-picker</strong>: 快速选颜色工具。链接:<a href="https://atom.io/packages/color-picker" target="_blank" rel="external">color-picker</a></li>
+<li><strong>emmet</strong>: 写 HTML 的神器。链接: <a href="https://atom.io/packages/emmet" target="_blank" rel="external">emmet</a></li>
+<li><strong>autocomplete-plus</strong>：更好的自动完成代码. 链接： <a href="https://atom.io/packages/autocomplete-plus" target="_blank" rel="external">autocomplete-plus</a></li>
+<li><strong>seti-ui</strong>：支持很多文件扩展名图标的主题。链接： <a href="https://atom.io/themes/seti-ui" target="_blank" rel="external">seti-ui</a></li>
+<li><strong>atom-beautify</strong>：美化代码。链接： <a href="https://atom.io/packages/atom-beautify" target="_blank" rel="external">atom-beautify</a></li>
+<li><strong>minimap</strong>：侧边预览代码。链接： <a href="https://atom.io/packages/minimap" target="_blank" rel="external">minimap</a></li>
+<li><strong>file-icons</strong>: 显示文件图标。 链接： <a href="https://atom.io/packages/file-icons" target="_blank" rel="external">file-icons</a></li>
+<li><strong>atom-beautify</strong>: 整理各种代码。 链接： <a href="https://atom.io/packages/atom-beautify" target="_blank" rel="external">atom-beautify</a></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Atom/">Atom</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/coder/">coder</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-Ubuntu下错误的解决" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -814,131 +886,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/coder/">coder</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-安装Flask-Bootstrap" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/17/安装Flask-Bootstrap/" class="article-date">
-  	<time datetime="2015-12-17T08:16:20.000Z" itemprop="datePublished">12/17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/17/安装Flask-Bootstrap/">学习Flask之Flask-Bootstrap</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="安装Flask-Bootstrap">安装Flask-Bootstrap</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install flask-bootstrap</span><br></pre></td></tr></table></figure>
-<h2 id="初始化Flask-Bootstrap">初始化Flask-Bootstrap</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> flask.ext.bootstrap <span class="keyword">import</span> Bootstrap</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">bootstrap = Bootstrap(app)</span><br></pre></td></tr></table></figure>
-<p>类似于Flask-Script，插件由flask.ext控件引入，通过向构造器传入app实例来初始化并得到这个插件的实例。</p>
-<p>Flask-Bootstrap初始化完成后，就得到一个包含了所有Bootstrap需要文件的基础模板。这个模板利用了Jinja2的继承机制，应用只需要继承这个模板，就得到了已经集成了Bootstrap的新模板。修改之前的base.html：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends "bootstrap/base.html" %&#125;</span><br><span class="line">&#123;% block head %&#125;</span><br><span class="line"> &#123;&#123;super()&#125;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"shortcut icon"</span> <span class="attribute">href</span>=<span class="value">"&#123;&#123;url_for('static',filename='favicon.ico')&#125;&#125;"</span></span><br><span class="line">      <span class="attribute">type</span>=<span class="value">"image/x-icon"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"icon"</span> <span class="attribute">href</span>=<span class="value">"&#123;&#123;url_for('static',filename='favicon.ico')&#125;&#125;"</span></span><br><span class="line">      <span class="attribute">type</span>=<span class="value">"image/x-icon"</span>/&gt;</span></span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block title %&#125; Flaskr &#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block navbar %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"navbar navbar-inverse"</span> <span class="attribute">role</span>=<span class="value">"navigation"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"navbar-header"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"navbar-toggle"</span> <span class="attribute">data-toggle</span>=<span class="value">"collapse"</span> <span class="attribute">data-target</span>=<span class="value">".navbar-collapse"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"sr-only"</span>&gt;</span>Toggle navigation<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"navbar-brand"</span> <span class="attribute">href</span>=<span class="value">"/"</span>&gt;</span>Flasky<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"navbar-collapse collapse"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"nav navbar-nav"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/"</span>&gt;</span>Home<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></span><br><span class="line">            &#123;% block page_content %&#125;&#123;% endblock%&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">&#123;% endblock%&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p>模板继承了由Flask-Bootstrap提供的bootstrap/base.html基础模板。这个基础模板包含了一个网页的骨架，同时已经包含了Bootstrap的CSS和JS文件。</p>
-<p>基础模板中定义的区块，可以被继承的模板里定义的区块覆盖。在<code>block</code>与<code>endblock</code>之间的内容会被填充到基础模板中。</p>
-<p>新的user.html里有<code>title</code>，<code>navbar</code>和<code>content</code>三个区块，在<code>navbar</code>里，利用Bootstrap组件定义了简单的导航条。</p>
-<p><strong>注：</strong> <em>基础模板的路径是在python的安装目录的FLask-Bootstrap下：\site-packages\flask_bootstrap\templates\bootstrap。</em></p>
-<p>Flask-Bootstrap的基础模板里提供多种区块：</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>doc</td>
-<td>全部HTML文档</td>
-</tr>
-<tr>
-<td>html_attribs</td>
-<td>html标签内部的属性</td>
-</tr>
-<tr>
-<td>html</td>
-<td>html标签中间的内容</td>
-</tr>
-<tr>
-<td>head</td>
-<td>head标签中间的内容</td>
-</tr>
-<tr>
-<td>title</td>
-<td>title标签中间的内容</td>
-</tr>
-<tr>
-<td>metas</td>
-<td>meta的一个列表</td>
-</tr>
-<tr>
-<td>styles</td>
-<td>CSS</td>
-</tr>
-<tr>
-<td>body_attribs</td>
-<td>body标签内部的属性</td>
-</tr>
-<tr>
-<td>body</td>
-<td>body标签中间的内容</td>
-</tr>
-<tr>
-<td>navbar</td>
-<td>自定义导航栏</td>
-</tr>
-<tr>
-<td>content</td>
-<td>自定义页面内容</td>
-</tr>
-<tr>
-<td>scripts</td>
-<td>文件底部的JavaScript声明</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/">flask</a></li></ul>
 	</div>
 
       

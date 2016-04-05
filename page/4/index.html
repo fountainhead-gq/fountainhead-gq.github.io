@@ -119,7 +119,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Atom/" style="font-size: 17.5px;">Atom</a> <a href="/tags/AutoHotKey/" style="font-size: 12.5px;">AutoHotKey</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 10px;">Matplotlib</a> <a href="/tags/Pyhton/" style="font-size: 10px;">Pyhton</a> <a href="/tags/python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 12.5px;">Ubuntu</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/datetime/" style="font-size: 10px;">datetime</a> <a href="/tags/flask/" style="font-size: 15px;">flask</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/pylab/" style="font-size: 10px;">pylab</a> <a href="/tags/regex/" style="font-size: 10px;">regex</a> <a href="/tags/str/" style="font-size: 10px;">str</a> <a href="/tags/人生感悟/" style="font-size: 10px;">人生感悟</a> <a href="/tags/成长会/" style="font-size: 10px;">成长会</a>
+						<a href="/tags/Atom/" style="font-size: 17.5px;">Atom</a> <a href="/tags/AutoHotKey/" style="font-size: 12.5px;">AutoHotKey</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 10px;">Matplotlib</a> <a href="/tags/Pyhton/" style="font-size: 12.5px;">Pyhton</a> <a href="/tags/python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 12.5px;">Ubuntu</a> <a href="/tags/Virtualenv/" style="font-size: 10px;">Virtualenv</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/datetime/" style="font-size: 10px;">datetime</a> <a href="/tags/flask/" style="font-size: 15px;">flask</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/pylab/" style="font-size: 10px;">pylab</a> <a href="/tags/regex/" style="font-size: 10px;">regex</a> <a href="/tags/str/" style="font-size: 10px;">str</a> <a href="/tags/人生感悟/" style="font-size: 10px;">人生感悟</a> <a href="/tags/成长会/" style="font-size: 10px;">成长会</a>
 					</div>
 				</section>
 				
@@ -194,6 +194,69 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Git常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/04/Git常用命令/" class="article-date">
+  	<time datetime="2015-06-04T03:16:52.000Z" itemprop="datePublished">06/04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/04/Git常用命令/">Git常用命令</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>查看、帮助命令 </strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git help &lt;command&gt;  <span class="comment"># 显示command的help</span></span><br><span class="line">git show            <span class="comment"># 显示某次提交的内容</span></span><br><span class="line">git show $id</span><br></pre></td></tr></table></figure></p>
+<p><strong>Git远程仓库管理 </strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git remote -v                    <span class="comment"># 查看远程服务器地址和仓库名称</span></span><br><span class="line">git remote show origin           <span class="comment"># 查看远程服务器仓库状态</span></span><br><span class="line">git remote rm &lt;repository&gt;       <span class="comment"># 删除远程仓库</span></span><br><span class="line">git remote set-head origin master   <span class="comment"># 设置远程仓库的HEAD指向master分支</span></span><br><span class="line">git remote add origin git@github:XXX/test.git  <span class="comment"># 添加远程仓库地址</span></span><br><span class="line">git remote set-url origin git@github.com:XXX/test.git  <span class="comment"># 设置远程仓库地址(用于修改远程仓库地址)</span></span><br><span class="line">git clone git@github:XXX/test.git   <span class="comment"># 克隆远程仓库</span></span><br><span class="line">git branch --set-upstream master origin/master</span><br><span class="line">git branch --set-upstream develop origin/develop</span><br></pre></td></tr></table></figure></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/coder/">coder</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/06/04/Git常用命令/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-Hexo博客搭建教程" class="article article-type-post" itemscope itemprop="blogPost">
   
